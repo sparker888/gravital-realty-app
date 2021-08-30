@@ -7,6 +7,7 @@ import useHouses from "../hooks/useHouses";
 import useFeaturedHouse from "../hooks/useFeaturedHouse";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HouseFromQuery from "../house/HouseFromQuery";
+import HousesContext from "../context/housesContext";
 
 function App() {
   const allHouses = useHouses();
