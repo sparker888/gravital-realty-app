@@ -15,17 +15,18 @@ function App() {
 
   return (
     <Router>
+      <HousesContext.Provider value={allHouses}>
       <div className="container">
         <Header subtitle="Providing houses all over the world" />
-        <HouseFilter allHouses={allHouses} />
+        <HouseFilter />
 
         <Switch>
           <Route path="/searchresults/:country">
-            <SearchResults allHouses={allHouses} />
+            <SearchResults />
           </Route>
 
           <Route path="/house/:id">
-            <HouseFromQuery allHouses={allHouses} />
+            <HouseFromQuery />
           </Route>
 
           <Route path="/">
@@ -33,6 +34,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      </HousesContext.Provider>
     </Router>
   );
 }
